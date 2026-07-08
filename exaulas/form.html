@@ -8,25 +8,104 @@
   <body>
     <h1>Formulários em HTML</h1>
 
-    <form method="post">
-      <label for="nome">Nome</label><br />
+    <form method="post" action="servidor.php">
+      <fieldset>
+        <legend>Login</legend>
+        <label for="nome">Nome</label><br />
+        <input
+          type="text"
+          name="nome"
+          id="nome"
+          placeholder="Digite o seu nome"
+          required
+          minlength="5"
+          maxlength="15"
+        />
+
+        <br />
+
+        <label for="senha">Senha</label><br />
+        <!-- Senha(entre o 'label') é o que aparece para o usuário-->
+        <input
+          type="password"
+          name="senha"
+          id="senha"
+          placeholder="Informe a sua senha"
+        />
+      </fieldset>
+      <br />
+      <label for="tel">Telefone</label><br />
+      <!-- No celular o teclado apareceria apenas com números devido a seleção type = tel-->
       <input
-        type="text"
-        name="nome"
-        id="nome"
-        placeholder="Digite o seu nome"
+        type="tel"
+        name="tel"
+        id="tel"
+        placeholder="Informe o seu telefone"
+      />
+
+      <br />
+      <label for="idade">Idade</label><br />
+      <input
+        type="number"
+        name="idade"
+        id="idade"
+        placeholder="Informe a sua idade"
+        min="12"
+        max="21"
         required
       />
-      <br />
 
-      <label for="senha">Senha</label><br />
-      <!-- Senha é o que aparece para o usuário-->
+      <br /><br />
+      <!--Opção selecione (em lista)-->
+      <select name="category" id="input-category">
+        <option value="">Selecione...</option>
+
+        <option value="eletronicos">Eletrônicos</option>
+        <option value="moda">Moda</option>
+        <option value="ti">Tecnologia</option>
+      </select>
+
+      <br /><br />
+      <fieldset>
+        <legend>Radio</legend>
+        <input type="radio" name="client-type" id="radio-pf" value="pf" />
+        <label for="radio-pf">Pessoa Física</label>
+        <br />
+        <input type="radio" name="client-type" id="radio-pj" value="pj" />
+        <label for="radio-pj">PessoaJurídica</label>
+      </fieldset>
+
+      <br>
+      <!-- type checkbox pode selecionar mais de uma opção de resposta por grupo-->
+       <fieldset>
+        <legend>Checkbox</legend>
       <input
-        type="password"
-        name="senha"
-        id="senha"
-        placeholder="Informe sua senha"
+        type="checkbox"
+        name="preferences"
+        id="check-offers"
+        value="offers"
       />
+      <label for="check-offers">Receber ofertas</label>
+      <br>
+      <input type="checkbox" name="preferences" id="check-news" value="news" />
+      <label for="check-news">Newsletter</label>
+      </fieldset>
+
+
+      <h2>Botão Comum</h2>
+      <p>Botão apenas para uma ação interna, não encerra o formulário</p>
+      <input type="button" value="mostrar mensagem" onclick="alert('Olá!')">
+
+      <h2>Botão Submit</h2>
+      <p>É o botão padrão de "enviar" que o formulário possui ao final</p>
+      <p>Ao clicar, o navegador:</p>
+      <p>- Verifica se o formulário é válido;</p>
+      <p>- Se houver erro, exibe mensagem de validação;</p>
+      <p>- Se estiver tudo correto, envia os dados.</p>
+
+      <input type="submit" value="Enviar">
+
+  
     </form>
   </body>
 </html>
