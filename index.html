@@ -33,46 +33,140 @@
         <!-- Tabela de Produtos-->
         <section class="product-list">
           <h3>Lista de Produtos</h3>
-        
-        <table border="5">
-          <thead>
-            <tr>
-              <th>Produto</th>
-              <th>Preço</th>
-              <th>Categoria</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Fone</td>
-              <td>250,00</td>
-              <td>Eletrônicos</td>
-            </tr>
-            <tr>
-              <td>Mouse</td>
-              <td>180,00</td>
-              <td>TI</td>
-            </tr>
-            <tr>
-              <td>Teclado</td>
-              <td>200,00</td>
-              <td>TI</td>
-            </tr>
-          </tbody>
-        </table>
-        </section>
-        <br><br>
-        <!-- Formulário -->
-         <section id="contato">
-          <h2>Cadastro / Contato</h2>
-          <form class="form-contato" method="post" action="servidor.php">
 
+          <table border="5">
+            <thead>
+              <tr>
+                <th>Produto</th>
+                <th>Preço</th>
+                <th>Categoria</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Fone</td>
+                <td>250,00</td>
+                <td>Eletrônicos</td>
+              </tr>
+              <tr>
+                <td>Mouse</td>
+                <td>180,00</td>
+                <td>TI</td>
+              </tr>
+              <tr>
+                <td>Teclado</td>
+                <td>200,00</td>
+                <td>TI</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <br /><br />
+
+        <!-- Formulário -->
+        <section id="contato">
+        <h2>Cadastro / Contato</h2>
+
+          <fieldset>
+          <legend>Login</legend>
+          <form class="form-contato" method="post" action="servidor.php">
+            <label for="nome">Nome</label><br />
+            <input
+              type="text"
+              name="nome"
+              id="nome"
+              placeholder="Informe o seu nome"
+              minlength="3"
+              required
+            />
+            <br /><br />
+
+              <label for="senha">Senha</label><br />
+            <input
+              type="password"
+              name="senha"
+              id="senha"
+              placeholder="Informe a sua senha"
+              required
+              minlength="8"
+            />
+            <br /><br />
+
+            <label for="email">E-mail</label><br />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Informe o seu email"
+              required
+            />
+            </fieldset>
+            <br> <br />
+
+            <fieldset>
+            <legend> Informaçôes Adicionais</legend>
+            <label for="idade">Idade</label><br>
+            <input
+              type="number"
+              name="idade"
+              id="idade"
+              placeholder="Informe a sua idade" 
+              min="18"
+              max="120"
+              required
+            />
+            <br /><br />
+          
+           <label for="input-category">Categoria</label><br>
+            <select name="category" id="input-category">
+            <option value="">Selecione...</option>
+
+            <option value="games">Games</option>
+            <option value="eledrodomesticos">Eletrodomésticos</option>
+            <option value="informatica">Informática</option>
+            </select>
+            <br><br>
+
+            
+              <legend>Preferências</legend>
+
+              <input type="checkbox" name="preferences" id="check-newsletter" value="newsletter">
+              <label for="check-newsletter">Informativos</label>
+              <br>
+              <input type="checkbox" name="preferences" id="check-offers" value="offers">
+              <label for="check-offers">Ofertas</label>
+              <br><br>
+
+
+              <legend>Tipo de Cliente</legend>
+              <input type="radio" name="client-type" id="radio-pf" value="pf" />
+              <label for="radio-pf">Pessoa Física</label>
+             <br />
+             <input type="radio" name="client-type" id="radio-pj" value="pj" />
+             <label for="radio-pj">PessoaJurídica</label>
+
+             <br><br>
+
+             <label for="msg">Mensagem</label><br>
+             <!--textarea abre a caixa de mensagem
+             cols: até 40 letras segue na mesma linha; depois vai para linha de baixo
+             rows: tamanjo da tela abrange até linhas-->
+             <textarea 
+             id="msg"
+             name="msg"
+             rows="5"
+             cols="40"
+             maxlength="300"
+             placeholder="Digite uma mensagem"></textarea>
+
+             <input type="submit" value="Enviar">
+            </fieldset>
 
 
           </form>
-         </section>
-         <br><br>
-         
+        </section>
+        <br /><br />
+
         <article>
           <h3>Notebook</h3>
           <p>Detalhes do Notebook</p>
@@ -82,9 +176,6 @@
           <p>Detalhes do Teclado</p>
         </article>
       </section>
-      
-
-      
     </main>
     <footer class="footer">
       <p>Todos os direitos reservados</p>
