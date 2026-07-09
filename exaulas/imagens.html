@@ -1,11 +1,73 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Imagens</title>
+  </head>
+  <body>
+    <h1>Imagens</h1>
+
+    <img src="../img/camisa.jpg" height="120" alt="camiseta branca" /><br />
+    <figure>
+      <img
+        src="../img/comida.jpeg"
+        width="150"
+        alt="prato com batatas fritas e carne"
+        loading="lazy"
+      /><br />
+    </figure>
+
+    <figure>
+      <img src="../img/iphone.jpg" width="150" />
+      <figcaption>Iphone 17 Pro Max Laranja</figcaption>
+    </figure>
+
+    <br /><br />
+
+    <h1>Vídeos</h1>
+
+    <video controls width="400" muted loop poster="../img/camisa.jpg">
+      <source src="../video/video.mp4" type="video/mp4" />
+      Seu navegador não suporta a reprodução de vídeos.
+      <!--Frase que só aparece para o usuário se o navegador dele não suportar o vídeo-->
+    </video>
+
+    <br /><br />
+
+    <h1>ifeame do youtube</h1>
+
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/Bt1AGCual7Q?si=TwpnJgUYdzr11Nb0"
+      title="YouTube video player"
+      frameborder="0"
+      allow="
+        accelerometer;
+        autoplay;
+        clipboard-write;
+        encrypted-media;
+        gyroscope;
+        picture-in-picture;
+        web-share;
+      "
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+
+    <br /><br />
+
+    <h1>iframe Google Maps</h1>
+
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14700.133380192055!2d-43.2404494758935!3d-22.912140904577974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997e5dba888b0d%3A0xf5f33188ee6274e5!2zTWFyYWNhbsOj!5e0!3m2!1spt-BR!2sbr!4v1783607143527!5m2!1spt-BR!2sbr"
+      width="600"
+      height="350"
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="strict-origin-when-cross-origin"
+    ></iframe>
+  </body>
 </html>
