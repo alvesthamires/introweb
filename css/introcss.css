@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(245, 245, 245);
+    color: #8B4513; /* color é a cor do texto */ /*até aqui quem não tinha cor definida era o h2, por isso só ele pegou a cor que selecionei*/
+
+    /*font-family: 'Times New Roman', Times, serif;*/
+    /* font-family: 'Courier New', Courier, monospace;*/ 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    line-height: 1.6; /* espaçamento entre as linhas do texto */
+}
+
+
+h1 {
+    color: red;
+    background-color: yellow;
+    margin: 120px;
+    padding: 20px;
+    text-align: center;
+}
+
+h2, h3 {
+    font-weight: 1000; /* espessura da fonte */
+}
+
+/* LINK*/ 
+a {
+    color: #7FFFD4;
+    text-decoration: none; /*link deixa de ser sublinhado, mas continua sendo link*/
+    transition: 1s; /* tempo de transição entre o hover e o não hover. "1s" 1 segundo */
+}
+
+a:hover {  /*ao passar o mouse em cima do meu link, acontece esses comandos: */
+    text-decoration: underline;
+    background-color: #FFFFFF;
+
+}
+
+/* quero atingir o id intro*/
+#intro {
+    background-color: darkgrey;
+    padding: 10px; 
+    /* margin: 20; */
+   /* padding-left: 30; */
+   /* padding-right: 20; */
+   /* padding: 10px 20px 30px 40px; /*sentido horário: topo, direita... */ 
+   /* padding: 10px 50px; /* 10 pega cima e baixo / 50 pega direita e esquer */
+
+   width: 200px;
+   height: 500px;
+
+   border: 7px double red;
+   border-radius: 8px;
+}
+
+p {
+    margin: 20px;
+}
