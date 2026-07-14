@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+font-family: Arial, sans-serif;
+background-color: #FFFFFF;
+color: #333;
+text-align: center;
+}
+
+/* Cabeçalho */
+.header {
+background-color: #1e90ff;
+color: white;
+padding: 20px;
+text-align: center;
+}
+
+/* Banner */
+.banner {
+background-color: #e3f2fd;
+padding: 20px;
+margin: 20px;
+border-radius: 8px; /* borda arredondada */
+}
+
+/* Seção de produtos */
+.products {
+margin: 20px;
+}
+
+
+/* Títulos */
+h2 {
+margin-bottom: 10px;
+}
+
+/* Rodapé */
+.footer {
+background-color: #1e90ff;
+color: white;
+text-align: center;
+padding: 15px;
+margin-top: 20px;
+}
+
