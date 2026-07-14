@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: burlywood;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#geral {
+    width: 900px;
+    margin: 30px auto;
+    background-color: #A0522D;
+}
+
+#bloco1, #bloco2 {
+    border: 3px solid black;
+    padding: 20px;
+    margin-bottom: 30px;
+    background-color: chocolate;
+}
+
+img{
+    width: 200px;
+    border: 3px solid black;
+}
+
