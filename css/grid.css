@@ -1,0 +1,60 @@
+/* grid.css - Código Inicial */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    padding: 20px;
+    background-color: #f4f4f9;
+}
+
+/* Exemplo de Flexbox usado apenas para centralizar o conteúdo do cabeçalho */
+.cabecalho {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.produto {
+    background-color: #fff;
+    border: 2px solid #ccc;
+    padding: 40px 20px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+/* ========================================== */
+/* ESCREVA SEU CÓDIGO GRID E RESPONSIVO ABAIXO */
+/* ========================================== */
+
+/* mobile-first : primeiro faz a responsividade para a tela de celular */
+.container-produtos {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+
+/* Responsividade para tela de tablet */
+@media (min-width: 768px) { /* quando a tela tiver 768px, faça isso:*/
+    .container-produtos {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Resolução para Desktop */
+@media (min-width: 1024px){
+    .container-produtos {
+        grid-template-columns: repeat(3,1fr); /* repete 3 vezes o 1fr */
+}
+}
