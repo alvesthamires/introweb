@@ -27,3 +27,74 @@ img{
     border: 3px solid black;
 }
 
+
+/*ENTENDENDO POSITION*/
+/*POSITION STATIC*/
+
+#img1 { /*mexendo na primeira foto, cama IGNORA PARÂMETROS DE MOVIMENTAÇÃO*/
+    position: static; /*ele é o padrão que já vem pra tudo, não mudou, e se fizer com outro comando não funciona*/
+    top: 100px; /*o top fica distante do topo da caixa*/
+    left: 100px; /*não funciona*/
+
+}
+
+/*POSITION RELATIVE - a posição do elemento é relativa à sua posição normal*/
+/*mochila - o espaço original ocupado continua ocupado mesmo após a movimentação*/
+#img3 {
+    position: relative;
+    top: 100px; 
+    left: 100px; /*se afastou da esquerda indo pro centro, mas tem o rigth e bottom*/
+}
+
+/*POSITION ABSOLUTE*/
+
+/*ELEMENTO PAI -> bloco1 */
+#bloco1 {
+    position: relative;
+}
+
+/*ELEMENTO FILHO -> img2 -> câmera*/
+/* ABOSLUTE - a posição do elemento é relativa ao seu elemento pai mais próximo que tenha POSITION diferente de static*/
+/* o espaço original ocupado fica livre após a movimentação*/
+    #img2 {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+/*POSITION FIXED*/
+/*bolsa - em vez de img4 poderia colocar o nome da #foto*/
+#img4 {
+    position: fixed; /*ela ficou fixa e quando roda a tela ela se movimenta, serve pra deixar o menu travado, no header*/
+    top: 50px;
+    left: 50px;
+}
+
+
+/*
+--------------------------------------------------------------
+        Z - INDEX
+--------------------------------------------------------------
+*/
+
+/*vamos testar o Z-INDEX com os blocos 1 e 2 -> o bloco fica na frente ou atrás */
+
+#bloco1{
+    position: relative;
+}
+
+#bloco2{
+    position: relative;
+    top: -120px;
+    left: 120px;
+}
+
+/* agora sim, vamos conhecer o Z-INDEX*/
+
+#bloco1 {
+    z-index: 2; /*quem tiver o maior número fica na frente*/
+}
+
+#bloco2 {
+    z-index: 1;
+}
