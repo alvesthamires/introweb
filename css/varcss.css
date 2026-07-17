@@ -1,0 +1,88 @@
+/* 1. VARIÁVEIS GLOBAIS */
+:root {
+  --cor-primaria: #0570b5;
+  --cor-secundaria: #02294d;
+  --cor-destaque: #51c8e6;
+  --cor-fundo: #f8f9fa;
+}
+/* 2. RESET E BASE */
+body {
+  background-color: var (--cor-fundo);
+  font-family: "Inter", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+/* 3. COMPONENTES */
+.produto-card {
+  background-color: white;
+  border: 2px solid var(--cor-primaria);
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 1px 2px 20px rgba(0, 0, 0, 1); /* Horizontal, vertical, transparência*/
+  animation: fadeIn 1s ease forwards;
+}
+
+.badge-novo {
+  background-color: var(--cor-destaque);
+  color: white;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  display: inline-block;
+  animation: pulso 1.5s ease-in-out infinite;
+}
+
+h2 {
+  color: #333333;
+}
+
+p {
+  color: #666666;
+}
+
+.btn-comprar {
+  background-color: var(--cor-primaria);
+  transition:
+    background 0.3s ease,
+    transform 0.5s ease;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 15px;
+}
+
+.btn-comprar:hover {
+  background-color: var(--cor-secundaria);
+  transform: scale(1.05);
+}
+/* 4. ANIMAÇÕES */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulso {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+
